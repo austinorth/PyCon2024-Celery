@@ -1,7 +1,7 @@
-
 import time
 from banking import bank_deposit_money
 from task_one import task_send_sms, task_send_whatsapp
+
 
 def deposit_and_send_sms_repetatively(account_no, amount, message, times):
     for i in range(times):
@@ -12,6 +12,6 @@ def deposit_and_send_sms_repetatively(account_no, amount, message, times):
 
 
 if __name__ == "__main__":
-    deposit_and_send_sms_repetatively(1234, 5000, "Your account has been credited with $5000", 1)
-
-    
+    deposit_and_send_sms_repetatively(
+        1234, 5000, "Your account has been credited with $5000", 10
+    )

@@ -10,10 +10,10 @@ whatsapp_sent_status = None
 def deposit_and_send_sms(account_no, amount, message):
     bank_deposit_money(account_no, amount)
     # send SMS and WhatsApp
-    
+
     global sms_sent_status
     sms_sent_status = task_send_sms.delay(account_no, message)
-    global whatsapp_sent_status 
+    global whatsapp_sent_status
     whatsapp_sent_status = task_send_whatsapp.delay(account_no, message)
 
 
@@ -22,14 +22,9 @@ def check_sms_whatsapp_status():
     print("Ready Status => ", sms_sent_status.ready())
     print("SMS Status: ", sms_sent_status.get())
     print("WhatsApp Status: ", whatsapp_sent_status.get())
-    
+
 
 if __name__ == "__main__":
     deposit_and_send_sms(1234, 5000, "Your account has been credited with $5000")
     # check the status of the SMS and WhatsApp
     check_sms_whatsapp_status()
-
-
-  
-
-

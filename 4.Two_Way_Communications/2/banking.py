@@ -1,4 +1,4 @@
-'''
+"""
 MIT License
 
 Copyright (c) 2024 Daksh Gupta
@@ -21,8 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-'''
+"""
 # Deposit money into the bank account
+
 
 def bank_deposit_money(account_no, amount):
     print("Depositing {0} in account {1}".format(amount, account_no))
@@ -30,9 +31,6 @@ def bank_deposit_money(account_no, amount):
 
 # Withdraw money from the bank account
 
+
 def bank_withdraw_money(account_no, amount):
     print("Withdrawing {0} from account {1}".format(amount, account_no))
-
-
-
-
